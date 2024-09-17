@@ -6,8 +6,11 @@ import base64
 
 print("base64 utility by nattu")  
 
-if(len(sys.argv) != 3):
-    print("Usage: b64 {-e|-d} \"<string>\"")
+if(len(sys.argv) != 3 or (sys.argv) == "--h"):
+    print("-e Encode")
+    print("-d Decode")
+    print("--help For Detailed help menu")
+    print("Usage: b64 {-e|-d} [-h] \"<string>\"")
     exit(-1)
 
 path = sys.argv[0]
