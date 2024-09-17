@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+import sys
+import base64
+
+# print(sys.argv)
+
+print("base64 utility by nattu")  
+
+if(len(sys.argv) != 3):
+    print("Usage: b64 {-e|-d} \"<string>\"")
+    exit(-1)
+
+path = sys.argv[0]
+option = sys.argv[1]
+data = sys.argv[2]
+
+if option == "-d":
+    print(base64.b64decode(data.encode()).decode())
+elif option == "-e":
+    print(base64.b64encode(data.encode()).decode())
+    
+
